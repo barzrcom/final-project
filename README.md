@@ -1,2 +1,2 @@
-# final_project
+# Final Project
 Colman Final Project Repository
