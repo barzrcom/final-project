@@ -10,8 +10,12 @@
 		3C5ACF15C243780526B5FE02 /* Pods_iOSFinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EB224070551550F617B0CE /* Pods_iOSFinalProject.framework */; };
 		5B0E93978A1E2F1AB9A42B85 /* Pods_iOSFinalProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180B23E7D33C68D91653D8EB /* Pods_iOSFinalProjectUITests.framework */; };
 		5C838E5651F36B206F526120 /* Pods_iOSFinalProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B3F734B3C00DD05863E394 /* Pods_iOSFinalProjectTests.framework */; };
+		A51D921E21B832DD00D357EC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D921D21B832DD00D357EC /* RegisterViewController.swift */; };
+		A51D922021B838D100D357EC /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D921F21B838D100D357EC /* Property.swift */; };
+		A51D922221B839A000D357EC /* PropertiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D922121B839A000D357EC /* PropertiesTableViewController.swift */; };
+		A51D922521B83A9E00D357EC /* PropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D922421B83A9E00D357EC /* PropertyTableViewCell.swift */; };
 		A5551AAD21B8297200A9D3A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5551AAC21B8297200A9D3A0 /* AppDelegate.swift */; };
-		A5551AAF21B8297200A9D3A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5551AAE21B8297200A9D3A0 /* ViewController.swift */; };
+		A5551AAF21B8297200A9D3A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5551AAE21B8297200A9D3A0 /* LoginViewController.swift */; };
 		A5551AB221B8297200A9D3A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5551AB021B8297200A9D3A0 /* Main.storyboard */; };
 		A5551AB521B8297200A9D3A0 /* iOSFinalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5551AB321B8297200A9D3A0 /* iOSFinalProject.xcdatamodeld */; };
 		A5551AB721B8297300A9D3A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5551AB621B8297300A9D3A0 /* Assets.xcassets */; };
@@ -19,6 +23,8 @@
 		A5551AC521B8297400A9D3A0 /* iOSFinalProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5551AC421B8297400A9D3A0 /* iOSFinalProjectTests.swift */; };
 		A5551AD021B8297400A9D3A0 /* iOSFinalProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5551ACF21B8297400A9D3A0 /* iOSFinalProjectUITests.swift */; };
 		A5551AE021B82C4200A9D3A0 /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5551ADF21B82C4200A9D3A0 /* FirebaseModel.swift */; };
+		A5AA720C21B83EE20059CC04 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA720B21B83EE20059CC04 /* Model.swift */; };
+		A5AA720E21B847590059CC04 /* PropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA720D21B847590059CC04 /* PropertyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +53,13 @@
 		9222C578B3A56E1CAB2790D4 /* Pods-iOSFinalProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFinalProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSFinalProjectUITests/Pods-iOSFinalProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		92B3F734B3C00DD05863E394 /* Pods_iOSFinalProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSFinalProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A695AE04707AA609316DECA /* Pods-iOSFinalProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFinalProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSFinalProjectTests/Pods-iOSFinalProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		A51D921D21B832DD00D357EC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A51D921F21B838D100D357EC /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		A51D922121B839A000D357EC /* PropertiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesTableViewController.swift; sourceTree = "<group>"; };
+		A51D922421B83A9E00D357EC /* PropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTableViewCell.swift; sourceTree = "<group>"; };
 		A5551AA921B8297200A9D3A0 /* iOSFinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5551AAC21B8297200A9D3A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A5551AAE21B8297200A9D3A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A5551AAE21B8297200A9D3A0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5551AB121B8297200A9D3A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5551AB421B8297200A9D3A0 /* iOSFinalProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSFinalProject.xcdatamodel; sourceTree = "<group>"; };
 		A5551AB621B8297300A9D3A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +72,8 @@
 		A5551ACF21B8297400A9D3A0 /* iOSFinalProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSFinalProjectUITests.swift; sourceTree = "<group>"; };
 		A5551AD121B8297400A9D3A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5551ADF21B82C4200A9D3A0 /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
+		A5AA720B21B83EE20059CC04 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A5AA720D21B847590059CC04 /* PropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyViewController.swift; sourceTree = "<group>"; };
 		AAF5A3E8C9E2BAA93D6A2102 /* Pods-iOSFinalProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFinalProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSFinalProjectUITests/Pods-iOSFinalProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +118,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A51D922321B83A7C00D357EC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A51D922421B83A9E00D357EC /* PropertyTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		A5551AA021B8297200A9D3A0 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +151,7 @@
 		A5551AAB21B8297200A9D3A0 /* iOSFinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				A51D922321B83A7C00D357EC /* Cells */,
 				A5551ADE21B82C2D00A9D3A0 /* Model */,
 				A5551ADD21B82C2200A9D3A0 /* ViewControllers */,
 				A5551AAC21B8297200A9D3A0 /* AppDelegate.swift */,
@@ -164,7 +185,10 @@
 		A5551ADD21B82C2200A9D3A0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A5551AAE21B8297200A9D3A0 /* ViewController.swift */,
+				A5551AAE21B8297200A9D3A0 /* LoginViewController.swift */,
+				A51D921D21B832DD00D357EC /* RegisterViewController.swift */,
+				A51D922121B839A000D357EC /* PropertiesTableViewController.swift */,
+				A5AA720D21B847590059CC04 /* PropertyViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -173,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				A5551ADF21B82C4200A9D3A0 /* FirebaseModel.swift */,
+				A51D921F21B838D100D357EC /* Property.swift */,
+				A5AA720B21B83EE20059CC04 /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -417,10 +443,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5AA720C21B83EE20059CC04 /* Model.swift in Sources */,
+				A5AA720E21B847590059CC04 /* PropertyViewController.swift in Sources */,
+				A51D922021B838D100D357EC /* Property.swift in Sources */,
 				A5551AE021B82C4200A9D3A0 /* FirebaseModel.swift in Sources */,
+				A51D921E21B832DD00D357EC /* RegisterViewController.swift in Sources */,
 				A5551AB521B8297200A9D3A0 /* iOSFinalProject.xcdatamodeld in Sources */,
-				A5551AAF21B8297200A9D3A0 /* ViewController.swift in Sources */,
+				A5551AAF21B8297200A9D3A0 /* LoginViewController.swift in Sources */,
 				A5551AAD21B8297200A9D3A0 /* AppDelegate.swift in Sources */,
+				A51D922521B83A9E00D357EC /* PropertyTableViewCell.swift in Sources */,
+				A51D922221B839A000D357EC /* PropertiesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
