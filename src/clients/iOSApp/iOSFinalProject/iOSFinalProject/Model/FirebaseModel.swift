@@ -14,8 +14,8 @@ class FirebaseModel{
     var ref: DatabaseReference!
 
     init() {
-//        FirebaseApp.configure()
-//        ref = Database.database().reference()
+        FirebaseApp.configure()
+        ref = Database.database().reference()
     }
     
     func getAllProperties(callback: @escaping ([Property]) -> Void){
