@@ -118,7 +118,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P7v-yc-gOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1128.8" y="975.56221889055485"/>
+            <point key="canvasLocation" x="1041" y="976"/>
         </scene>
         <!--Property View Controller-->
         <scene sceneID="5lD-W4-6Go">
@@ -134,9 +134,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcF-SS-7ja">
+                                <rect key="frame" x="201" y="476" width="96" height="30"/>
+                                <state key="normal" title="Add comment"/>
+                                <connections>
+                                    <segue destination="Omh-cY-OPd" kind="show" id="la4-0a-OZ3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="1dK-i8-E3W" firstAttribute="bottom" secondItem="ZcF-SS-7ja" secondAttribute="bottom" constant="356" id="Bi8-Gn-NAN"/>
+                            <constraint firstItem="1dK-i8-E3W" firstAttribute="trailing" secondItem="ZcF-SS-7ja" secondAttribute="trailing" constant="117" id="GPY-1A-4lm"/>
+                            <constraint firstItem="ZcF-SS-7ja" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1dK-i8-E3W" secondAttribute="leading" id="GTl-Ns-Scd"/>
                             <constraint firstItem="TkP-SB-pSJ" firstAttribute="top" secondItem="1dK-i8-E3W" secondAttribute="top" constant="40" id="dQ6-dl-Bk1"/>
                             <constraint firstItem="TkP-SB-pSJ" firstAttribute="centerX" secondItem="0CN-iE-rqd" secondAttribute="centerX" id="gPh-3z-XK3"/>
                             <constraint firstItem="1dK-i8-E3W" firstAttribute="trailing" secondItem="TkP-SB-pSJ" secondAttribute="trailing" constant="16" id="qPw-Mo-Ket"/>
@@ -149,7 +159,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWN-29-CWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1873" y="976"/>
+            <point key="canvasLocation" x="1872.4637681159422" y="975.66964285714278"/>
+        </scene>
+        <!--Add Comment View Controller-->
+        <scene sceneID="G0c-8Q-wuV">
+            <objects>
+                <viewController id="Omh-cY-OPd" customClass="AddCommentViewController" customModule="iOSFinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oTd-wl-6Jn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="v3S-kP-P0O"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P93-sQ-3ZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2674" y="971"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="H1H-AU-zrU">

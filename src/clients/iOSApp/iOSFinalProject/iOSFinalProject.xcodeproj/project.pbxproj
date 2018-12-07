@@ -25,6 +25,7 @@
 		A5551AE021B82C4200A9D3A0 /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5551ADF21B82C4200A9D3A0 /* FirebaseModel.swift */; };
 		A5AA720C21B83EE20059CC04 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA720B21B83EE20059CC04 /* Model.swift */; };
 		A5AA720E21B847590059CC04 /* PropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA720D21B847590059CC04 /* PropertyViewController.swift */; };
+		A5F71A2E21BA781D00C27CC5 /* AddCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F71A2D21BA781D00C27CC5 /* AddCommentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		A5551ADF21B82C4200A9D3A0 /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
 		A5AA720B21B83EE20059CC04 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A5AA720D21B847590059CC04 /* PropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyViewController.swift; sourceTree = "<group>"; };
+		A5F71A2D21BA781D00C27CC5 /* AddCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentViewController.swift; sourceTree = "<group>"; };
 		AAF5A3E8C9E2BAA93D6A2102 /* Pods-iOSFinalProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFinalProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSFinalProjectUITests/Pods-iOSFinalProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,6 +191,7 @@
 				A51D921D21B832DD00D357EC /* RegisterViewController.swift */,
 				A51D922121B839A000D357EC /* PropertiesTableViewController.swift */,
 				A5AA720D21B847590059CC04 /* PropertyViewController.swift */,
+				A5F71A2D21BA781D00C27CC5 /* AddCommentViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5F71A2E21BA781D00C27CC5 /* AddCommentViewController.swift in Sources */,
 				A5AA720C21B83EE20059CC04 /* Model.swift in Sources */,
 				A5AA720E21B847590059CC04 /* PropertyViewController.swift in Sources */,
 				A51D922021B838D100D357EC /* Property.swift in Sources */,
