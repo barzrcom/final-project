@@ -1,3 +1,7 @@
 [submodule "src/ios"]
 	path = src/ios
 	url = https://github.com/Etinka/iOSAppFinalProject.git
+
+[submodule "src/mean"]
+	path = src/mean
+	url = https://github.com/ilaypilo/Colman-Y03S01-Advanced-Web-Applications.git
