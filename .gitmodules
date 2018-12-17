@@ -1,0 +1,3 @@
+[submodule "src/ios"]
+	path = src/ios
+	url = https://github.com/Etinka/iOSAppFinalProject.git
