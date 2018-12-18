@@ -1,0 +1,897 @@
+{
+  "_id": "5c12d7ead3ad5d025ce09e3a",
+  "order_type_id": 3,
+  "background_color": "fef0a9",
+  "coordinates": {
+    "latitude": "32.071849",
+    "longitude": "34.769064"
+  },
+  "row_1": "יונה הנביא 46",
+  "title_1": "יונה הנביא 46",
+  "title_2": "דירה",
+  "row_2": "דירה, כרם התימנים, תל אביב יפו",
+  "row_3": [
+    "3 חדרים",
+    "70 מ\"ר",
+    "קומה 3"
+  ],
+  "row_4": [
+    {
+      "key": "rooms",
+      "label": "חדרים",
+      "value": 3
+    },
+    {
+      "key": "floor",
+      "label": "קומה",
+      "value": 3
+    },
+    {
+      "key": "SquareMeter",
+      "label": "מ\"ר",
+      "value": "70 "
+    }
+  ],
+  "line_1": "3 חדרים",
+  "line_2": "קומה 3",
+  "external": [],
+  "promotional_ad": 0,
+  "ad_type": "ad",
+  "type": "ad",
+  "can_hide": 0,
+  "is_hidden": 0,
+  "img_url": "//img.yad2.co.il/Pic/201812/08/2_1/o/o2_1_1_749053_20181208191239.jpg",
+  "merchant": false,
+  "link_token": "n42cni",
+  "ad_highlight_type": "yellow",
+  "highlight_text": "",
+  "is_liked": 0,
+  "like_count": 0,
+  "line_1_text_color": "",
+  "line_2_text_color": "808080",
+  "can_change_layout": 1,
+  "default_layout": "system",
+  "remove_on_unlike": false,
+  "video_url": null,
+  "updated_at": "עודכן היום",
+  "price": "3,100,000 ₪",
+  "currency": "₪",
+  "street": "יונה הנביא",
+  "id": "n42cni",
+  "city": "תל אביב יפו",
+  "date_added": "2018-11-12 20:07:32",
+  "customer_id": 3342466,
+  "address_home_number": "46",
+  "subcat_id": "1",
+  "TotalFloor_text": 4,
+  "currency_text": "₪",
+  "cat_id": "2",
+  "date": "2018-12-12 20:23:09",
+  "neighborhood": "כרם התימנים",
+  "HomeTypeID_text": "דירה",
+  "AreaID_text": "תל אביב",
+  "Rooms_text": 3,
+  "date_of_entry": "2018-12-12",
+  "Floor_text": 3,
+  "contact_name": "אלי",
+  "AssetClassificationID_text": "במצב שמור",
+  "Porch_text": "1",
+  "ad_number": "97645981",
+  "area_id": 1,
+  "square_meters": 70,
+  "line_3": "70 מ\"ר",
+  "office_logo_url": null,
+  "info": {
+    "additional_info_items_v2": [
+      {
+        "key": "air_conditioner",
+        "value": true,
+        "title": "מיזוג",
+        "popup_text": ""
+      },
+      {
+        "key": "bars",
+        "value": false,
+        "title": "סורגים",
+        "popup_text": ""
+      },
+      {
+        "key": "parking",
+        "value": false,
+        "title": "חניה",
+        "popup_text": ""
+      },
+      {
+        "key": "elevator",
+        "value": false,
+        "title": "מעלית",
+        "popup_text": ""
+      },
+      {
+        "key": "accessibility",
+        "value": false,
+        "title": "גישה לנכים",
+        "popup_text": ""
+      },
+      {
+        "key": "balcony",
+        "value": true,
+        "title": "מרפסת",
+        "popup_text": ""
+      },
+      {
+        "key": "sun_proch",
+        "value": true,
+        "title": "מרפסת שמש",
+        "popup_text": ""
+      },
+      {
+        "key": "renovated",
+        "value": true,
+        "title": "משופצת",
+        "popup_text": ""
+      },
+      {
+        "key": "shelter",
+        "value": false,
+        "title": "ממ\"ד",
+        "popup_text": ""
+      },
+      {
+        "key": "warhouse",
+        "value": true,
+        "title": "מחסן",
+        "popup_text": ""
+      },
+      {
+        "key": "pandor_doors",
+        "value": false,
+        "title": "דלתות פנדור",
+        "popup_text": ""
+      },
+      {
+        "key": "tadiran_c",
+        "value": false,
+        "title": "מזגן תדיראן",
+        "popup_text": ""
+      },
+      {
+        "key": "furniture",
+        "value": false,
+        "title": "ריהוט",
+        "popup_text": ""
+      },
+      {
+        "key": "housing_unit",
+        "value": false,
+        "title": "יחידת דיור",
+        "popup_text": ""
+      }
+    ],
+    "additional_info_title": "יש בנכס",
+    "address_area": "תל אביב",
+    "address_city": "תל אביב יפו",
+    "address_home_num": {
+      "home_number": "46",
+      "show_home_number": "הצג במודעה"
+    },
+    "address_home_number": "46",
+    "address_neighborhood": "כרם התימנים",
+    "ad_highlight_type": "yellow",
+    "ad_number": "37209521",
+    "agency_info": null,
+    "area_id": 1,
+    "area_rating": null,
+    "balconies": 1,
+    "button_bar": {
+      "bar_state": "float",
+      "items": [
+        {
+          "key": "phone",
+          "is_menu": false,
+          "menu_items": null,
+          "event": "KMApplication.instant.activeView.presentContactInfo();",
+          "link": null,
+          "title": "שם איש הקשר: אלי"
+        },
+        {
+          "key": "contact_seller",
+          "is_menu": false,
+          "menu_items": null,
+          "event": "KMAdView.currentPage.presentContactSeller();",
+          "link": null
+        },
+        {
+          "key": "notes",
+          "is_menu": false,
+          "menu_items": null,
+          "event": "KMAdView.currentPage.presentEditNotePanel();",
+          "link": null
+        },
+        {
+          "key": "more",
+          "is_menu": true,
+          "menu_items": [
+            {
+              "title": "למחיר מדד הנדלן",
+              "link": null,
+              "event": null
+            },
+            {
+              "title": "לצפייה בנתוני השכונה",
+              "link": null,
+              "event": null
+            },
+            {
+              "title": "למעקב על כתובת זו",
+              "link": null,
+              "event": null
+            }
+          ],
+          "event": "",
+          "link": null
+        }
+      ]
+    },
+    "can_hide": false,
+    "cat_id": "2",
+    "city_text": "תל אביב יפו",
+    "customer_id": 3342466,
+    "date": "עודכן היום",
+    "date_added": "2018-11-12 20:07:32",
+    "date_of_entry": "12/12/2018",
+    "date_raw": "2018-12-12 20:23:09",
+    "educational_info": [],
+    "furniture_info": "",
+    "garden_area": "",
+    "highlight_text": "",
+    "id": "n42cni",
+    "images": [
+      "//img.yad2.co.il/Pic/201812/08/2_1/o/o2_1_1_749053_20181208191239.jpg",
+      "//img.yad2.co.il/Pic/201812/08/2_1/o/o2_1_2_746716_20181208191219.jpg",
+      "//img.yad2.co.il/Pic/201812/08/2_1/o/o2_1_3_748277_20181208191245.jpg",
+      "//img.yad2.co.il/Pic/201812/08/2_1/o/o2_1_4_748350_20181208191234.jpg",
+      "//img.yad2.co.il/Pic/201812/08/2_1/o/o2_1_5_749562_20181208191206.jpg"
+    ],
+    "important_info_items": [
+      {
+        "key": "שכונה",
+        "value": "כרם התימנים"
+      },
+      {
+        "value": "יונה הנביא",
+        "key": "רחוב"
+      },
+      {
+        "value": "3 מתוך 4 ",
+        "key": "קומה"
+      },
+      {
+        "key": "נתוני השכונה",
+        "link_url": "http://homeprices.yad2.co.il/neighborhood/תל אביב יפו/יונה הנביא-46",
+        "value": "לחץ כאן"
+      }
+    ],
+    "important_info_title": "חשוב לדעת",
+    "info_bar_items": [
+      {
+        "key": "rooms",
+        "title": "3 חדרים",
+        "label": "חדרים",
+        "titleWithoutLabel": "3"
+      },
+      {
+        "key": "floor",
+        "title": "קומה 3",
+        "label": "קומה",
+        "titleWithoutLabel": "3"
+      },
+      {
+        "key": "meter",
+        "title": "70 מ\"ר",
+        "label": "מ\"ר",
+        "titleWithoutLabel": "70"
+      },
+      {
+        "key": "entrance",
+        "title": "כניסה מיידית",
+        "label": null,
+        "titleWithoutLabel": "כניסה מיידית"
+      }
+    ],
+    "info_text": "מושכרת 7300 ש\"ח לפני תמא 1 מתוכנן תוספת 14 מ\"ר ממד,תהיה מעלית ללא חניה. מתחתיה אותה דירה עם דייר בדמי מפתח מוצעת גם למכירה ב 800 אלף. בהיתר לתמא יהיה אפשר לדרוש פינוי עם פיצוי ואז למזג לדו פלקס..",
+    "info_title": "על הנכס",
+    "is_liked": null,
+    "i": "ad",
+    "like_count": 0,
+    "link_token": "n42cni",
+    "main_title": "דירה&nbsp;למכירה&nbsp;בתל אביב יפו",
+    "main_title_params": [
+      "3 חדרים",
+      "70 מ\"ר",
+      "קומה 3"
+    ],
+    "merchant": "",
+    "navigation_data": {
+      "coordinates": {
+        "latitude": "32.071849",
+        "longitude": "34.769064"
+      },
+      "zoom": 16,
+      "pov": {
+        "heading": 180,
+        "pitch": 0,
+        "zoom": 0
+      }
+    },
+    "navigation_links": {
+      "map": {
+        "link_title": "מפה",
+        "map_data": {
+          "view_type": "map",
+          "header_info": {
+            "profile_image": "https://evbdn.eventbrite.com/s3-s3/eventlogos/21768196/gur.jpg",
+            "main_title": "דירה&nbsp;למכירה&nbsp;בתל אביב יפו",
+            "second_title": "יונה הנביא&nbsp;46&nbsp;כרם התימנים"
+          },
+          "coordinates": {
+            "latitude": "32.071849",
+            "longitude": "34.769064"
+          },
+          "zoom": 16
+        }
+      },
+      "street_view": {
+        "link_title": "מבט רחוב",
+        "map_data": {
+          "view_type": "streetview",
+          "header_info": {
+            "profile_image": "https://evbdn.eventbrite.com/s3-s3/eventlogos/21768196/gur.jpg",
+            "main_title": "דירה&nbsp;למכירה&nbsp;בתל אביב יפו",
+            "second_title": "יונה הנביא&nbsp;46&nbsp;כרם התימנים"
+          },
+          "coordinates": {
+            "latitude": "32.071849",
+            "longitude": "34.769064"
+          },
+          "pov": {
+            "heading": 180,
+            "pitch": 0
+          },
+          "zoom": 1
+        }
+      }
+    },
+    "neighborhood": "כרם התימנים",
+    "neighborhood_info": [],
+    "note_text": null,
+    "order_type_id": 3,
+    "price": "3,100,000 ₪",
+    "pricelist_link_title": "מחיר הנכס במדד הנדל\"ן",
+    "pricelist_link_url": "http://invest.yad2.co.il/city/%D7%AA%D7%9C-%D7%90%D7%91%D7%99%D7%91-%D7%99%D7%A4%D7%95",
+    "profile_image": "https://evbdn.eventbrite.com/s3-s3/eventlogos/21768196/gur.jpg",
+    "promotional_info": [],
+    "record_id": 1759209,
+    "second_title": "יונה הנביא&nbsp;46&nbsp;כרם התימנים",
+    "square_meters": 70,
+    "street": "יונה הנביא",
+    "subcat_id": "1",
+    "submit_error_link": true,
+    "type": "ad",
+    "updated_at": "עודכן ב 01/01/1970",
+    "video_url": "",
+    "media": {
+      "zone": "desktop/realestate/sale",
+      "layout": "my16",
+      "params": {
+        "CityID": "5000",
+        "yad1City": "5000",
+        "HomeTypeID": 1,
+        "AssetType": "apartment",
+        "fromRooms": 3,
+        "untilRooms": 3,
+        "fromPrice": 3100000,
+        "untilPrice": 3100000,
+        "FromFloor": 3,
+        "ToFloor": 3,
+        "FromSquareMeter": 70,
+        "ToSquareMeter": 70,
+        "SecondaryAreaID": 48,
+        "PrimaryAreaID": 2,
+        "SecondaryArea": "tel_aviv_center",
+        "PrimaryArea": "hamerkaz_area",
+        "searchB144FromYad2": "2_C_1800",
+        "tivuch": "no",
+        "artiMedia_iscroll_group": "yad2.iscroll.realestate.center",
+        "eratePopUnderPerIds": [
+          36
+        ],
+        "abovePrice": "3000000",
+        "AppType": "desktop",
+        "mainpage": "no",
+        "measurements": "realestate",
+        "merchant": "no",
+        "catID": 2,
+        "subCatID": 1,
+        "current_zone": "adDetails",
+        "location": "adDetails",
+        "pageType": "adDetails",
+        "mainCategoryZones": {
+          "1": "vehicles",
+          "2": "realestate",
+          "3": "second_hand",
+          "5": "pets",
+          "6": "studies",
+          "10": "tourism",
+          "11": "alternative",
+          "12": "hospitality",
+          "14": "maids_and_nannies",
+          "15": "commercial"
+        },
+        "zonePrefix": "desktop/",
+        "version": "guru",
+        "abtest": 12,
+        "userid": "chi6410618182",
+        "isQA": 1
+      },
+      "artiMedia_iscroll_group": "yad2.iscroll.realestate.center",
+      "eratePopUnderPerIds": [
+        36
+      ],
+      "locations": [],
+      "lightboxLocations": null
+    },
+    "favorites_userid": "chi6410618182",
+    "alternate_url": "m.yad2.co.il/ad/n42cni",
+    "categoryDic": {
+      "catEn": "realestate",
+      "subCatEn": "forsale"
+    },
+    "yad1Ads": [],
+    "agency_more_items": [],
+    "pricelist_articles": [],
+    "rating_area": []
+  },
+  "additional_info": {
+    "yad1Ads": [
+      {
+        "order_type_id": 1,
+        "background_color": "f0f0f0",
+        "coordinates": {
+          "latitude": null,
+          "longitude": null
+        },
+        "row_1": "SPARK",
+        "title_1": "SPARK תל אביב יפו נווה שרת",
+        "title_2": "חבילת הטבות לכל המשפחה",
+        "row_2": " נווה שרת תל אביב יפו",
+        "row_3": [
+          "3 חדרים"
+        ],
+        "row_4": [
+          {
+            "key": "rooms",
+            "label": "חדרים",
+            "value": "3.0"
+          },
+          {
+            "key": "floor",
+            "label": "קומה",
+            "value": "קרקע"
+          },
+          {
+            "key": "SquareMeter",
+            "label": "מ\"ר",
+            "value": ""
+          }
+        ],
+        "line_1": "נווה שרת 3 חדרים דירה",
+        "line_2": "חבילת הטבות לכל המשפחה",
+        "external": [],
+        "promotional_ad": 1,
+        "ad_type": "yad1",
+        "type": "ad",
+        "can_hide": 0,
+        "is_hidden": 0,
+        "img_url": "https://pics.yad2.co.il/Pics/2018/10/20181016110209.jpg",
+        "merchant": false,
+        "link_token": "y1_3282",
+        "ad_highlight_type": "none",
+        "highlight_text": "",
+        "is_liked": 0,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "can_change_layout": 1,
+        "default_layout": "system",
+        "remove_on_unlike": false,
+        "video_url": null,
+        "updated_at": "",
+        "price": null,
+        "cat_id": "2",
+        "subcat_id": "99",
+        "street": "דבורה הנביאה 79",
+        "neighborhood": "נווה שרת",
+        "promotion_text": "חבילת הטבות לכל המשפחה",
+        "city": "תל אביב יפו",
+        "id": "2_99_3282",
+        "area_id": 1,
+        "AreaID_text": "תל אביב",
+        "Rooms_text": 3,
+        "HomeTypeID_text": "דירה",
+        "square_meters": null,
+        "line_3": "",
+        "office_logo_url": "https://pics.yad2.co.il/Pics/2018/10/20181016110407.jpg",
+        "merchant_name": "יחד נדל\"ן",
+        "project_name": "SPARK",
+        "project_id": "3282",
+        "company_id": "893"
+      },
+      {
+        "order_type_id": 1,
+        "background_color": "f0f0f0",
+        "coordinates": {
+          "latitude": null,
+          "longitude": null
+        },
+        "row_1": "מתחם נווה שאנן",
+        "title_1": "מתחם נווה שאנן תל אביב יפו נווה שאנן",
+        "title_2": "הטרנד של תל אביב נמצא כאן!",
+        "row_2": " נווה שאנן תל אביב יפו",
+        "row_3": [
+          "4 חדרים"
+        ],
+        "row_4": [
+          {
+            "key": "rooms",
+            "label": "חדרים",
+            "value": "4.0"
+          },
+          {
+            "key": "floor",
+            "label": "קומה",
+            "value": "קרקע"
+          },
+          {
+            "key": "SquareMeter",
+            "label": "מ\"ר",
+            "value": ""
+          }
+        ],
+        "line_1": "נווה שאנן 4 חדרים גג/פנטהאוז",
+        "line_2": "הטרנד של תל אביב נמצא כאן!",
+        "external": [],
+        "promotional_ad": 1,
+        "ad_type": "yad1",
+        "type": "ad",
+        "can_hide": 0,
+        "is_hidden": 0,
+        "img_url": "https://pics.yad2.co.il/Pics/2018/10/20181018175842.jpg",
+        "merchant": false,
+        "link_token": "y1_3286",
+        "ad_highlight_type": "none",
+        "highlight_text": "",
+        "is_liked": 0,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "can_change_layout": 1,
+        "default_layout": "system",
+        "remove_on_unlike": false,
+        "video_url": null,
+        "updated_at": "",
+        "price": null,
+        "cat_id": "2",
+        "subcat_id": "99",
+        "street": "",
+        "neighborhood": "נווה שאנן",
+        "promotion_text": "הטרנד של תל אביב נמצא כאן!",
+        "city": "תל אביב יפו",
+        "id": "2_99_3286",
+        "area_id": 1,
+        "AreaID_text": "תל אביב",
+        "Rooms_text": 4,
+        "HomeTypeID_text": "גג/פנטהאוז",
+        "square_meters": null,
+        "line_3": "",
+        "office_logo_url": "https://pics.yad2.co.il/Pics/2018/10/20181021093602.jpg",
+        "merchant_name": "מרכז העיר-נדל\"ן",
+        "project_name": "מתחם נווה שאנן",
+        "project_id": "3286",
+        "company_id": "1169"
+      },
+      {
+        "order_type_id": 1,
+        "background_color": "f0f0f0",
+        "coordinates": {
+          "latitude": "32.115363",
+          "longitude": "34.8242007"
+        },
+        "row_1": "אורות אפקה",
+        "title_1": "אורות אפקה תל אביב יפו נאות אפקה",
+        "title_2": "כי לכל חלום יש בית",
+        "row_2": " נאות אפקה תל אביב יפו",
+        "row_3": [
+          "4 חדרים"
+        ],
+        "row_4": [
+          {
+            "key": "rooms",
+            "label": "חדרים",
+            "value": "4.0"
+          },
+          {
+            "key": "floor",
+            "label": "קומה",
+            "value": "קרקע"
+          },
+          {
+            "key": "SquareMeter",
+            "label": "מ\"ר",
+            "value": ""
+          }
+        ],
+        "line_1": "נאות אפקה 4 חדרים דירה",
+        "line_2": "כי לכל חלום יש בית",
+        "external": [],
+        "promotional_ad": 1,
+        "ad_type": "yad1",
+        "type": "ad",
+        "can_hide": 0,
+        "is_hidden": 0,
+        "img_url": "https://pics.yad2.co.il/Pics/2017/09/20170907121445.jpg",
+        "merchant": false,
+        "link_token": "y1_3043",
+        "ad_highlight_type": "none",
+        "highlight_text": "",
+        "is_liked": 0,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "can_change_layout": 1,
+        "default_layout": "system",
+        "remove_on_unlike": false,
+        "video_url": null,
+        "updated_at": "",
+        "price": null,
+        "cat_id": "2",
+        "subcat_id": "99",
+        "street": "קהילת פאדובה, 27",
+        "neighborhood": "נאות אפקה",
+        "promotion_text": "כי לכל חלום יש בית",
+        "city": "תל אביב יפו",
+        "id": "2_99_3043",
+        "area_id": 1,
+        "AreaID_text": "תל אביב",
+        "Rooms_text": 4,
+        "HomeTypeID_text": "דירה",
+        "square_meters": null,
+        "line_3": "",
+        "office_logo_url": "https://pics.yad2.co.il/Pics/2017/09/20170913103727.jpg",
+        "merchant_name": "י.הויברגר יזמות בע\"מ",
+        "project_name": "אורות אפקה",
+        "project_id": "3043",
+        "company_id": "1143"
+      },
+      {
+        "order_type_id": 1,
+        "background_color": "f0f0f0",
+        "coordinates": {
+          "latitude": null,
+          "longitude": null
+        },
+        "row_1": "פארק תל-אביב",
+        "title_1": "פארק תל-אביב תל אביב יפו עזרא",
+        "title_2": "אל תפספסו את ההזדמנות",
+        "row_2": " עזרא תל אביב יפו",
+        "row_3": [
+          "3 חדרים"
+        ],
+        "row_4": [
+          {
+            "key": "rooms",
+            "label": "חדרים",
+            "value": "3.0"
+          },
+          {
+            "key": "floor",
+            "label": "קומה",
+            "value": "קרקע"
+          },
+          {
+            "key": "SquareMeter",
+            "label": "מ\"ר",
+            "value": ""
+          }
+        ],
+        "line_1": "עזרא 3 חדרים דירה",
+        "line_2": "אל תפספסו את ההזדמנות",
+        "external": [],
+        "promotional_ad": 1,
+        "ad_type": "yad1",
+        "type": "ad",
+        "can_hide": 0,
+        "is_hidden": 0,
+        "img_url": "https://pics.yad2.co.il/Pics/2018/03/20180311182219.jpg",
+        "merchant": false,
+        "link_token": "y1_2019",
+        "ad_highlight_type": "none",
+        "highlight_text": "",
+        "is_liked": 0,
+        "like_count": 0,
+        "line_1_text_color": "",
+        "line_2_text_color": "808080",
+        "can_change_layout": 1,
+        "default_layout": "system",
+        "remove_on_unlike": false,
+        "video_url": null,
+        "updated_at": "",
+        "price": null,
+        "cat_id": "2",
+        "subcat_id": "99",
+        "street": "רח' הבלונים",
+        "neighborhood": "עזרא",
+        "promotion_text": "אל תפספסו את ההזדמנות",
+        "city": "תל אביב יפו",
+        "id": "2_99_2019",
+        "area_id": 1,
+        "AreaID_text": "תל אביב",
+        "Rooms_text": 3,
+        "HomeTypeID_text": "דירה",
+        "square_meters": null,
+        "line_3": "",
+        "office_logo_url": "https://pics.yad2.co.il/Pics/2018/03/20180312103853.jpg",
+        "merchant_name": "אלעד ישראל מגורים",
+        "project_name": "פארק תל-אביב",
+        "project_id": "2019",
+        "company_id": "402"
+      }
+    ],
+    "educational_info": {
+      "title": "נתונים על בתי הספר וכיתות הלימוד בתל אביב יפו",
+      "link": {
+        "link_title": "למידע נוסף",
+        "link_url": "http://homeprices.yad2.co.il/education/תל-אביב-יפו"
+      },
+      "tables": [
+        {
+          "title": "כמות מוסדות חינוך בשכונה",
+          "subTitles": [
+            "גני ילדים",
+            "יסודי",
+            "על יסודי"
+          ],
+          "rows": [
+            670,
+            103,
+            63
+          ]
+        },
+        {
+          "title": "ממוצע תלמידים בכיתה",
+          "subTitles": [
+            "סוג חינוך",
+            "יסודי",
+            "על יסודי"
+          ],
+          "rows": [
+            [
+              "חינוך ממלכתי",
+              24,
+              23
+            ],
+            [
+              "חינוך דתי",
+              18,
+              21
+            ],
+            [
+              "חינוך מיוחד",
+              7,
+              7
+            ]
+          ]
+        }
+      ]
+    },
+    "neighborhood_info": {
+      "neighborhood_info_title": "עסקאות שבוצעו באזור",
+      "neighborhood_info_title_items": [
+        "יום מכירה",
+        "כתובת",
+        "חדרים",
+        "מחיר העסקה"
+      ],
+      "neighborhood_info_items": [
+        [
+          "17-10-2018",
+          "מטמון כהן 7 , תל אביב יפו",
+          "5.0",
+          "12,000,000 ₪"
+        ],
+        [
+          "09-10-2018",
+          "בבלי 7 , תל אביב יפו",
+          "3.5",
+          "3,225,000 ₪"
+        ],
+        [
+          "03-10-2018",
+          "בבלי 1 , תל אביב יפו",
+          "4.0",
+          "2,987,000 ₪"
+        ],
+        [
+          "26-09-2018",
+          "משה שרת 87 , תל אביב יפו",
+          "3.0",
+          "2,600,000 ₪"
+        ]
+      ],
+      "neighborhood_link_title": "עסקאות נוספות",
+      "neighborhood_event": "KMMobileApplication.loadURL('http://homeprices.yad2.co.il/street//-')"
+    },
+    "rating_area": {
+      "title": "ציון הגולשים על האיזור",
+      "rating": 4,
+      "rating_info": [
+        {
+          "value": 3,
+          "txt": "כמות החניה ברחוב",
+          "maxtxt": "מעט",
+          "mintxt": "הרבה"
+        },
+        {
+          "value": 4.5,
+          "txt": "קרבה לשירותים מסחריים",
+          "maxtxt": "רחוק",
+          "mintxt": "קרוב"
+        },
+        {
+          "value": 4.6,
+          "txt": "נגישות לתחבורה ציבורית",
+          "maxtxt": "לא נגיש",
+          "mintxt": "נגיש"
+        },
+        {
+          "value": 3.8,
+          "txt": "רמת הרעש ברחוב",
+          "maxtxt": "רועש",
+          "mintxt": "שקט"
+        }
+      ],
+      "rating_total_count": 753,
+      "url_all_ratings": "//homeprices.yad2.co.il/reviews/תל אביב יפו",
+      "items": [
+        {
+          "text": "אזור שקט מאד, נגיש לתחבורה ציבורית ולנתיבי איילון ברכב פרטי, קרוב מאד לגני ילדים, אוכלוסייה טובה מאד",
+          "address": "מנורה 13,  תל אביב יפו",
+          "city": "תל אביב יפו",
+          "date": "04-09-2018",
+          "link": ""
+        },
+        {
+          "text": "קרוב יחסית למרכז ת\"א. קווי אוטובוסים נוחים. אזור שקט. קירבה לאזורי מסחר.",
+          "address": "עמישב 70,  תל אביב יפו",
+          "city": "תל אביב יפו",
+          "date": "03-08-2018",
+          "link": ""
+        },
+        {
+          "text": "קרוב לעזריאלי ולתחבורה ציבורית. תחושת קהילתיות. ",
+          "address": "דם המכבים 45,  תל אביב יפו",
+          "city": "תל אביב יפו",
+          "date": "03-08-2018",
+          "link": ""
+        },
+        {
+          "text": "לצעירים",
+          "address": "צריפין 39,  תל אביב יפו",
+          "city": "תל אביב יפו",
+          "date": "06-06-2018",
+          "link": ""
+        }
+      ]
+    }
+  }
+}
