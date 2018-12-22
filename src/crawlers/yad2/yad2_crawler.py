@@ -6,6 +6,7 @@ import os
 import re
 import requests
 import threading
+from concurrent.futures import ThreadPoolExecutor
 
 logger = logging.getLogger(__name__)
 
@@ -56,12 +57,14 @@ class PageWorker(threading.Thread):
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36",
         "Accept-Encoding": "gzip, deflate",
         "Accept-Language": "en-US,en;q=0.9,he;q=0.8",
-        "Cookie": "y2018-2-cohort=90; y2018-2-access=true; use_elastic_search=1; _ga=GA1.3.238762837.1544441703; _gid=GA1.3.1497888994.1544441703; PHPSESSID=3a4daf84ad73028868fc36a651c74c46; fitracking_12=no; __gads=ID=9839c78fc20ffef1:T=1544441656:S=ALNI_MYXGPpuyPojVD4RM4_G4GyrK1bk4w; TS011ed9fa=01cdef7ca22ba61476b4cd131f1629d7d806861c1ffddf352a867b0f521ca618f633a58786bec7bbca11f81b0692a0cbf3dad33405054d9206da74d43c06de954c028b892311864321aa9b6ca652700da35b0177d3; SPSI=146c1ae28ca53f4374aaeaccef952d90; sbtsck=jav; UTGv2=h4bc5bcf4bdd24a24ccdf8ffc82301382c29; yad2_session=3HqzL7EtMaR8Khl49Xn39DSsHc9KO3Bm8mpV3u6P; fi_utm=direct%7Cdirect%7C%7C%7C%7C; PRLST=PL; favorites_userid=chi6410618182; adOtr=1c4a126Beac; historyprimaryarea=sharon_area; historysecondaryarea=raanana_kfar_saba; yad2upload=520093706.38005.0000; BetterJsPop0=1; y1-site=_in_x1_b_285_s_nad_pop_1rashy_rotemshany; spcsrf=ed41e68e84df220c7c617231be6e46df"
+        "Cookie": "SPSI=4fb48720f779bb8b8e522997063123e4; sbtsck=jav; UTGv2=h433685f4b0feae33772f7ad7586644b5d84; PHPSESSID=9l7a80r4m7aqtcje6ivce2hsk4; y2018-2-cohort=85; y2018-2-access=true; _ga=GA1.3.1207357502.1545424959; _gid=GA1.3.1621445391.1545424959; use_elastic_search=1; yad2_session=BBulquXqQ7UaWMknD05ZdD4Ie72CMZbHSWkPLz1r; fitracking_12=no; fi_utm=direct%7Cdirect%7C%7C%7C%7C; __gads=ID=58a86ba80b7c2dc3:T=1545424963:S=ALNI_MYhs8qKUhqU3xB9Ueg09FjaD-buXg; _hjIncludedInSample=1; sp_lit=fqXCzvSImMG7tXZpXwcveQ==; PRLST=Le; adOtr=84WW40bf277; favorites_userid=fbj9587662061; yad2upload=520093706.38005.0000; spcsrf=7f6b23025a40f9853eb807273025ea90"
     }
     URL_FORSALE = "http://www.yad2.co.il/api/pre-load/getFeedIndex/realestate/forsale?page={}"
+    # URL_RENT = "http://www.yad2.co.il/api/pre-load/getFeedIndex/realestate/rent?page={}"
 
     URL_ITEM = "http://www.yad2.co.il/api/item/{id}"
     URL_ADDI_INFO = "http://www.yad2.co.il/api/item/{id}/additionalinfo"
+    # URL_CONTACT_INFO = "http://www.yad2.co.il/api/item/{id}/contactinfo?id={id}"
 
     def __init__(self, group=None, target=None, name=None,
                  args=(), kwargs=None, *, daemon=True):
@@ -73,13 +76,14 @@ class PageWorker(threading.Thread):
         self.reach_end = False
 
         self.feed = self.kwargs.pop("feed")
+        self.run()
 
     def run(self):
         page = self.args[0]
         try:
             page_info = self.get_page(page)
-        except ValueError:
-            logger.info("Stop reading")
+        except ValueError as e:
+            logger.info("Stop reading " + str(e))
             self.reach_end = True
             return
 
@@ -98,7 +102,7 @@ class PageWorker(threading.Thread):
         res = requests.get(self.URL_FORSALE.format(page_num), headers=self.HEADERS)
         try:
             items = res.json()['feed']['feed_items']
-        except json.JSONDecodeError as e:
+        except (json.JSONDecodeError, ValueError) as e:
             logger.error(res.text)
             return -1
         # slice items and retrieve only the values with an 'id' value
@@ -150,20 +154,18 @@ class Crawler:
         t = FileWorker(args=(feed,), kwargs={'properties_per_page': self.properties_per_page})
         t.start()
 
+        executor = ThreadPoolExecutor(max_workers=self.max_workers, thread_name_prefix="PageThread")
+        t_list = []
         while self.more_pages:
-            t_list = []
-            for number in range(self.max_workers):
-                t = PageWorker(args=(self.page,), kwargs={"feed": feed})
-                t.start()
-                t_list.append(t)
-                self.page += 1
+            future = executor.submit(PageWorker, args=(self.page,), kwargs={"feed": feed})
+            self.page += 1
+            t_list.append(future)
 
-            [t.join() for t in t_list]
-            if any([t.reach_end for t in t_list]):
-                self.more_pages = False
-                t.stop = True
-                t.join()
-                break
+            if t_list and t_list[0].done():
+                t = t_list.pop(0).result()
+                if t.reach_end:
+                    self.more_pages = False
+        executor.shutdown(wait=True)
 
 
 if __name__ == '__main__':
@@ -173,5 +175,5 @@ if __name__ == '__main__':
     logger.setLevel(level=logging.INFO)
     logger.addHandler(c_handler)
 
-    c = Crawler()
+    c = Crawler(max_workers=15)
     c.run()
