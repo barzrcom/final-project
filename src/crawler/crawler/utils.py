@@ -1,5 +1,8 @@
+import logging
 from bson.json_util import loads
 from pymongo import MongoClient
+
+logger = logging.getLogger(__name__)
 
 
 def init_server(db_name, col):
@@ -25,7 +28,7 @@ if __name__ == '__main__':
     ]
 
     for doc in docs:
-        print(f"writing doc to DB, doc name: {doc}")
+        logger.info(f"writing doc to DB, doc name: {doc}")
         res = load_feeds_from_json(doc)
 
         for item in res.values():

@@ -1,5 +1,3 @@
-import sys
-
 import json
 import logging
 import os
@@ -21,7 +19,7 @@ class FileWorker(threading.Thread):
         self.kwargs = kwargs
         self.stop = False
 
-        self.properties_per_page = self.kwargs.pop("properties_per_page")
+        self.properties_per_file = self.kwargs.pop("properties_per_file")
 
     @staticmethod
     def gen_file(feeds):
@@ -38,13 +36,13 @@ class FileWorker(threading.Thread):
         logger.info("FileWorker is waiting for enough jobs to dump to file..")
         feed = self.args[0]
         while not self.stop:
-            while len(feed) > self.properties_per_page:
-                keys = list(feed.keys())[:self.properties_per_page]
+            while len(feed) > self.properties_per_file:
+                keys = list(feed.keys())[:self.properties_per_file]
                 dump = {k: feed.pop(k) for k in keys}
                 # when gets to the number of page that the user wants, dump current feed to file
                 self.gen_file(dump)
         if feed:
-            # dump all feeds that left. properly less than "self.properties_per_page"
+            # dump all feeds that left. properly less than "self.properties_per_file"
             self.gen_file(feed)
 
 
@@ -64,6 +62,7 @@ class PageWorker(threading.Thread):
 
     URL_ITEM = "http://www.yad2.co.il/api/item/{id}"
     URL_ADDI_INFO = "http://www.yad2.co.il/api/item/{id}/additionalinfo"
+
     # URL_CONTACT_INFO = "http://www.yad2.co.il/api/item/{id}/contactinfo?id={id}"
 
     def __init__(self, group=None, target=None, name=None,
@@ -141,8 +140,8 @@ class PageWorker(threading.Thread):
 
 
 class Crawler:
-    def __init__(self, properties_per_page=1000, max_workers=8):
-        self.properties_per_page = properties_per_page
+    def __init__(self, properties_per_file=1000, max_workers=8):
+        self.properties_per_file = properties_per_file
         self.max_workers = max_workers
         self.more_pages = True
         self.page = 1
@@ -151,7 +150,7 @@ class Crawler:
         logger.info(f"Running Crawler.")
         feed = {}
 
-        t = FileWorker(args=(feed,), kwargs={'properties_per_page': self.properties_per_page})
+        t = FileWorker(args=(feed,), kwargs={'properties_per_file': self.properties_per_file})
         t.start()
 
         executor = ThreadPoolExecutor(max_workers=self.max_workers, thread_name_prefix="PageThread")
@@ -166,14 +165,3 @@ class Crawler:
                 if t.reach_end:
                     self.more_pages = False
         executor.shutdown(wait=True)
-
-
-if __name__ == '__main__':
-    c_handler = logging.StreamHandler(sys.stdout)
-    c_format = logging.Formatter('%(asctime)s [ %(funcName)-15s] %(levelname)s: (%(threadName)-10s) %(message)s')
-    c_handler.setFormatter(c_format)
-    logger.setLevel(level=logging.INFO)
-    logger.addHandler(c_handler)
-
-    c = Crawler(max_workers=15)
-    c.run()
