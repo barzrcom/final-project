@@ -1,52 +1,16 @@
 import json
 import logging
-import os
-import re
-import requests
 import threading
 from concurrent.futures import ThreadPoolExecutor
+
+import requests
+
+from ..engines.common import FileWorker
 
 logger = logging.getLogger(__name__)
 
 
-class FileWorker(threading.Thread):
-
-    def __init__(self, group=None, target=None, name=None,
-                 args=(), kwargs=None, *, daemon=True):
-        super().__init__(group=group, target=target, name=name,
-                         daemon=daemon)
-        self.args = args
-        self.kwargs = kwargs
-        self.stop = False
-
-        self.properties_per_file = self.kwargs.pop("properties_per_file")
-
-    @staticmethod
-    def gen_file(feeds):
-        f_name = "feeds_1.json"
-        while os.path.exists(f_name):
-            num = re.match(r".+_([\d]+).+", f_name).group(1)
-            f_name = f_name.replace(num, str(int(num) + 1))
-
-        logger.info(f"Creating new file: {f_name}.")
-        with open(f_name, "a") as f:
-            json.dump(feeds, f, ensure_ascii=False)
-
-    def run(self):
-        logger.info("FileWorker is waiting for enough jobs to dump to file..")
-        feed = self.args[0]
-        while not self.stop:
-            while len(feed) > self.properties_per_file:
-                keys = list(feed.keys())[:self.properties_per_file]
-                dump = {k: feed.pop(k) for k in keys}
-                # when gets to the number of page that the user wants, dump current feed to file
-                self.gen_file(dump)
-        if feed:
-            # dump all feeds that left. properly less than "self.properties_per_file"
-            self.gen_file(feed)
-
-
-class PageWorker(threading.Thread):
+class Yad2PageWorker(threading.Thread):
     HEADERS = {
         "Host": "www.yad2.co.il",
         "Connection": "keep-alive",
@@ -139,7 +103,7 @@ class PageWorker(threading.Thread):
         return {"info": items, "additional_info": items1}
 
 
-class Crawler:
+class Yad2Crawler:
     def __init__(self, properties_per_file=1000, max_workers=8):
         self.properties_per_file = properties_per_file
         self.max_workers = max_workers
@@ -156,7 +120,7 @@ class Crawler:
         executor = ThreadPoolExecutor(max_workers=self.max_workers, thread_name_prefix="PageThread")
         t_list = []
         while self.more_pages:
-            future = executor.submit(PageWorker, args=(self.page,), kwargs={"feed": feed})
+            future = executor.submit(Yad2PageWorker, args=(self.page,), kwargs={"feed": feed})
             self.page += 1
             t_list.append(future)
 
