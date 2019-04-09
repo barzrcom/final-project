@@ -6,7 +6,7 @@ logger = logging.getLogger(__name__)
 
 
 def init_server(db_name, col):
-    client = MongoClient()
+    client = MongoClient(socketTimeoutMS=20000, waitQueueTimeoutMS=20000)
     db = client[db_name]
     collection = db[col]
     return db, collection
