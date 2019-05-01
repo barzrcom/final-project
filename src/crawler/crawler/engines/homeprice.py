@@ -135,6 +135,7 @@ class HomePriceCrawler:
         t_list = []
         # print([val for val in self.data])
         for city, street in self.data:
+            # TODO: add neighborhood to each item
             future = executor.submit(HomePricePageWorker, args=(city, street), kwargs={"feed": feed})
             t_list.append(future)
 
