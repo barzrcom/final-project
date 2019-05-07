@@ -7,5 +7,6 @@ ENV LANG=en_US.UTF-8 \
 COPY ml .
 
 RUN pip install -r requirements.txt
+WORKDIR ./ml
 
-CMD flask run --host 0.0.0.0
+CMD ["python","__main__.py"]
