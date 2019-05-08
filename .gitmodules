@@ -5,3 +5,6 @@
 [submodule "src/mean"]
 	path = src/mean
 	url = https://github.com/ilaypilo/Colman-Y03S01-Advanced-Web-Applications.git
+[submodule "src/android"]
+	path = src/android
+	url = https://github.com/Etinka/AndroidAppFinalProject.git
