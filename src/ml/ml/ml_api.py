@@ -6,7 +6,7 @@ import pandas as pd
 from flask import request, Blueprint
 from sklearn.externals import joblib
 
-API_PATH = "/v1/api"
+API_PATH = "/api/ml/v1"
 
 # Create a new 'v1/api' in addition to the APP page
 api = Blueprint(API_PATH, __name__)
@@ -82,13 +82,13 @@ def build_years():
     #     years.append(z)
     # years = sorted(years)
     # print(f"From year: {years[0]}, to year: {years[-1]}")
-    return json.dumps(range(1800, 2023))  # statically from 1800 - 2022
+    return json.dumps(list(range(1800, 2023)))  # statically from 1800 - 2022
 
 
 @api.route(f'{API_PATH}/predict', methods=['POST'])
 def predict():
     content = request.get_json()
-
+    print(content)
     city = content['city']
     data = content['data']
     algo_name = content.get('algo', 'algo')
