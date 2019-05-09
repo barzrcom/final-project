@@ -82,7 +82,7 @@ def build_years():
     #     years.append(z)
     # years = sorted(years)
     # print(f"From year: {years[0]}, to year: {years[-1]}")
-    return json.dumps(list(range(1800, 2023)))  # statically from 1800 - 2022
+    return json.dumps(list(range(1945, 2023)))  # statically from 1945 - 2022
 
 
 @api.route(f'{API_PATH}/predict', methods=['POST'])
@@ -102,6 +102,14 @@ def predict():
     _data = {k: [] for k in data[0].keys()}
     for prop in data:
         for k, v in prop.items():
+            # "rooms_number": 4,
+            # "floor": 10,
+            # "building_mr": 116,
+            # "build_year": "2019-01-01",
+            v['rooms_number'] = int(v['rooms_number'])
+            v['floor'] = int(v['floor'])
+            v['building_mr'] = int(v['building_mr'])
+            v['build_year'] = f"{v['build_year']}-01-01"
             _data[k].append(v)
 
     _X = pd.DataFrame(data=_data)
