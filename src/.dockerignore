@@ -1,5 +1,5 @@
 **/*.json
-**/*.csv
+**/data*.csv
 **/*.ipynb
 **/node_modules
 **/Pods
