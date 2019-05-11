@@ -1,6 +1,7 @@
 import codecs
 import json
 import os
+from collections import OrderedDict
 
 import pandas as pd
 from flask import request, Blueprint
@@ -88,7 +89,6 @@ def build_years():
 @api.route(f'{API_PATH}/predict', methods=['POST'])
 def predict():
     content = request.get_json()
-    print(content)
     city = content['city']
     data = content['data']
     algo_name = content.get('algo', 'algo')
@@ -98,8 +98,17 @@ def predict():
 
     processor = joblib.load(os.path.join("pickles", city, "processor.joblib"))
     algo = joblib.load(os.path.join("pickles", city, f"{algo_name}.joblib"))
+    _data = OrderedDict({
+        "street": [],
+        "neighborhood": [],
+        "property_type": [],
+        "rooms_number": [],
+        "floor": [],
+        "build_year": [],
+        "building_mr": [],
+        "city": []
+    })
 
-    _data = {k: [] for k in data[0].keys()}
     for prop in data:
         for k, v in prop.items():
             if k in ['rooms_number', 'floor', 'building_mr']:
@@ -107,10 +116,9 @@ def predict():
             elif k == 'build_year':
                 v = f"{v}-01-01"
             _data[k].append(v)
-
+    print(_data)
     _X = pd.DataFrame(data=_data)
-
     _X = processor.transform(_X)
     y_pred = algo.predict(_X)
-
+    print(y_pred)
     return json.dumps(y_pred.tolist())
