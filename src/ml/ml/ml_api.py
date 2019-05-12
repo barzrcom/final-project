@@ -2,6 +2,7 @@ import codecs
 import json
 import os
 from collections import OrderedDict
+from datetime import datetime
 
 import pandas as pd
 from flask import request, Blueprint
@@ -106,7 +107,8 @@ def predict():
         "floor": [],
         "build_year": [],
         "building_mr": [],
-        "city": []
+        "city": [],
+        "sale_day_year": [str(datetime.now().year)] * len(data) 
     })
 
     for prop in data:
