@@ -48,7 +48,7 @@ def cities():
 @api.route(f'{API_PATH}/neighborhoods/<city>', methods=['GET'])
 def neighborhood(city):
     if city not in _available_cities():
-        return f"City '{city}'' is not available.", 404
+        return f"City '{city}' is not available.", 404
 
     content = _city_values(city)
     return json.dumps(content['neighborhood'], ensure_ascii=False)
@@ -57,7 +57,7 @@ def neighborhood(city):
 @api.route(f'{API_PATH}/streets/<city>', methods=['GET'])
 def streets(city):
     if city not in _available_cities():
-        return f"City '{city}'' is not available.", 404
+        return f"City '{city}' is not available.", 404
 
     content = _city_values(city)
     return json.dumps(content['street'], ensure_ascii=False)
@@ -84,7 +84,7 @@ def build_years():
     #     years.append(z)
     # years = sorted(years)
     # print(f"From year: {years[0]}, to year: {years[-1]}")
-    return json.dumps(list(range(1945, 2023)))  # statically from 1945 - 2022
+    return json.dumps(list(reversed(range(1945, 2023))))  # statically from 1945 - 2022
 
 
 @api.route(f'{API_PATH}/predict', methods=['POST'])
@@ -95,7 +95,7 @@ def predict():
     algo_name = content.get('algo', 'algo')
 
     if city not in _available_cities():
-        return f"City '{city}'' is not available.", 404
+        return f"City '{city}' is not available.", 404
 
     processor = joblib.load(os.path.join("pickles", city, "processor.joblib"))
     algo = joblib.load(os.path.join("pickles", city, f"{algo_name}.joblib"))
