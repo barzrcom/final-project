@@ -141,15 +141,13 @@ def predict():
         "build_year": [],
         "building_mr": [],
         "city": [],
-        "sale_day_year": [str(datetime.now().year)] * len(data)
+        "sale_day_year": [int(datetime.now().year)] * len(data)
     })
 
     for prop in data:
         for k, v in prop.items():
-            if k in ['rooms_number', 'floor', 'building_mr']:
+            if k in ['rooms_number', 'floor', 'building_mr', 'build_year', 'sale_day_year']:
                 v = int(v)
-            elif k == 'build_year':
-                v = f"{v}-01-01"
             _data[k].append(v)
     print(_data)
     _X = pd.DataFrame(data=_data)
