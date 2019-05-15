@@ -26,10 +26,13 @@ def _city_values(city):
         # TODO: cache should be FileSystemCache to be limited to time and not by existent of file
         df = pd.read_csv("data/map_address_neighborhood.csv")
         df = df.loc[city == df['city']]
+        subset = df.groupby('neighborhood')['street'].unique().reset_index().values
 
         content = json.dumps({
             "street": df['street'].drop_duplicates().sort_values().get_values().tolist(),
-            "neighborhood": df['neighborhood'].drop_duplicates().sort_values().get_values().tolist()
+            "streets": {x[1]: x[0] for x in df[['neighborhood', 'street']].values},
+            "neighborhood": df['neighborhood'].drop_duplicates().sort_values().get_values().tolist(),
+            "neighborhoods": {x[0]: x[1].tolist() for x in subset}
         }, ensure_ascii=False)
         with codecs.open(json_f, 'wb', encoding='utf-8') as f:
             f.write(content)
@@ -61,6 +64,36 @@ def streets(city):
 
     content = _city_values(city)
     return json.dumps(content['street'], ensure_ascii=False)
+
+
+@api.route(f'{API_PATH}/get_neighborhood', methods=['GET'])
+def get_neighborhood():
+    data = request.get_json()
+    city = data.get('city')
+    street = data.get('street')
+    if city not in _available_cities():
+        return f"City '{city}' is not available.", 404
+
+    content = _city_values(city)
+    if not content['streets'].get(str(street)):
+        return f"Street '{street}' is not available in city {city}.", 404
+
+    return json.dumps(content['streets'][street], ensure_ascii=False)
+
+
+@api.route(f'{API_PATH}/get_streets', methods=['GET'])
+def get_streets():
+    data = request.get_json()
+    city = data.get('city')
+    neighborhood = data.get('neighborhood')
+    if city not in _available_cities():
+        return f"City '{city}' is not available.", 404
+
+    content = _city_values(city)
+    if not content['neighborhoods'].get(str(neighborhood)):
+        return f"Neighborhood '{neighborhood}' is not available in city {city}.", 404
+
+    return json.dumps(content['neighborhoods'][neighborhood], ensure_ascii=False)
 
 
 @api.route(f'{API_PATH}/property_types', methods=['GET'])
@@ -108,7 +141,7 @@ def predict():
         "build_year": [],
         "building_mr": [],
         "city": [],
-        "sale_day_year": [str(datetime.now().year)] * len(data) 
+        "sale_day_year": [str(datetime.now().year)] * len(data)
     })
 
     for prop in data:
