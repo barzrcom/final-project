@@ -68,9 +68,8 @@ def streets(city):
 
 @api.route(f'{API_PATH}/get_neighborhood', methods=['GET'])
 def get_neighborhood():
-    data = request.get_json()
-    city = data.get('city')
-    street = data.get('street')
+    city = request.args.get('city')
+    street = request.args.get('street')
     if city not in _available_cities():
         return f"City '{city}' is not available.", 404
 
@@ -83,9 +82,8 @@ def get_neighborhood():
 
 @api.route(f'{API_PATH}/get_streets', methods=['GET'])
 def get_streets():
-    data = request.get_json()
-    city = data.get('city')
-    neighborhood = data.get('neighborhood')
+    city = request.args.get('city')
+    neighborhood = request.args.get('neighborhood')
     if city not in _available_cities():
         return f"City '{city}' is not available.", 404
 
