@@ -120,6 +120,26 @@ def build_years():
     return json.dumps(list(reversed(range(1945, 2023))))  # statically from 1945 - 2022
 
 
+@api.route(f'{API_PATH}/get_plot/<city>', methods=['GET'])
+def get_plot(city):
+    png_file = os.path.join("pickles", city, "algo_fig.png")
+
+    with open(png_file, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    return content.encode('utf-8')
+
+
+@api.route(f'{API_PATH}/get_mse/<city>', methods=['GET'])
+def get_mse(city):
+    png_file = os.path.join("pickles", city, "algo_mse.txt")
+
+    with open(png_file, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    return content
+
+
 @api.route(f'{API_PATH}/predict', methods=['POST'])
 def predict():
     content = request.get_json()
