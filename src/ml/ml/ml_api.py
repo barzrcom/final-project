@@ -125,7 +125,7 @@ def get_plot(city):
     with open(png_file, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    return content.encode('utf-8')
+    return content
 
 
 @api.route(f'{API_PATH}/get_mse/<city>', methods=['GET'])
