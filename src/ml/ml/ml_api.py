@@ -5,7 +5,7 @@ from collections import OrderedDict
 from datetime import datetime
 
 import pandas as pd
-from flask import request, Blueprint
+from flask import request, Blueprint, send_file
 from sklearn.externals import joblib
 
 API_PATH = "/api/ml/v1"
@@ -121,18 +121,14 @@ def build_years():
 @api.route(f'{API_PATH}/get_plot/<city>', methods=['GET'])
 def get_plot(city):
     png_file = os.path.join("pickles", city, "algo_fig.png")
-
-    with open(png_file, 'r', encoding='utf-8') as f:
-        content = f.read()
-
-    return content
+    return send_file(png_file, mimetype='image/png')
 
 
 @api.route(f'{API_PATH}/get_mse/<city>', methods=['GET'])
 def get_mse(city):
-    png_file = os.path.join("pickles", city, "algo_mse.txt")
+    mse_file = os.path.join("pickles", city, "algo_mse.txt")
 
-    with open(png_file, 'r', encoding='utf-8') as f:
+    with open(mse_file, 'r', encoding='utf-8') as f:
         content = f.read()
 
     return content
