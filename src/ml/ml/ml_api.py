@@ -155,7 +155,7 @@ def predict():
         "build_year": [],
         "building_mr": [],
         "city": [],
-        "sale_day_year": [int(datetime.now().year)] * len(data)
+        "sale_day_year": []
     })
 
     for prop in data:
@@ -163,6 +163,11 @@ def predict():
             if k in ['rooms_number', 'floor', 'building_mr', 'build_year', 'sale_day_year']:
                 v = int(v)
             _data[k].append(v)
+
+        if "sale_day_year" not in prop.keys():
+            # add default value of the current year for sale_day_year
+            _data['sale_day_year'] = int(datetime.now().year)
+
     print(_data)
     _X = pd.DataFrame(data=_data)
     _X = processor.transform(_X)
