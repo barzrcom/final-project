@@ -98,8 +98,7 @@ def get_streets():
 def property_types():
     # TODO: should be dynamically from data
     # df['property_type'].unique().tolist()
-    types = ['דירה בבית קומות', 'דירת גג', 'דירת מגורים', 'בית בודד',
-             "קוטג' חד משפחתי", "קוטג' דו משפחתי", 'דירת נופש', 'דירת גן']
+    types = ["דירה בבית קומות", "דירת מגורים"]
     return json.dumps(types, ensure_ascii=False)
 
 
@@ -160,8 +159,10 @@ def predict():
 
     for prop in data:
         for k, v in prop.items():
-            if k in ['rooms_number', 'floor', 'building_mr', 'build_year', 'sale_day_year']:
+            if k in ['floor', 'building_mr', 'build_year', 'sale_day_year']:
                 v = int(v)
+            if k in ['rooms_number']:
+                v = float(v)
             _data[k].append(v)
 
         if "sale_day_year" not in prop.keys():
