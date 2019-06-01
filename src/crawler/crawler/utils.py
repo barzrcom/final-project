@@ -14,22 +14,28 @@ def init_server(db_name, col):
 
 def load_feeds_from_json(f_name):
     with open(f_name, "r") as f:
-        res = loads(f.read())
+        try:
+            res = loads(f.read())
+        except UnicodeDecodeError as e:
+            print(f.read())
+            return None
 
     return res
 
 
 if __name__ == '__main__':
     db, collection = init_server(db_name="yad2_test_1", col="col1")
-    num_of_files = 62
+    num_of_files = 56
 
     docs = [
         "feeds_{}.json".format(i) for i in range(1, num_of_files)
     ]
 
     for doc in docs:
-        logger.info(f"writing doc to DB, doc name: {doc}")
+        print(f"writing doc to DB, doc name: {doc}")
         res = load_feeds_from_json(doc)
+        if res is None:
+            continue
 
         for item in res.values():
             collection.insert(item)

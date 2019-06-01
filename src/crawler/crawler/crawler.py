@@ -22,7 +22,7 @@ def main(args):
     c_handler = logging.StreamHandler(sys.stdout)
     c_format = logging.Formatter('%(asctime)s [ %(funcName)-15s] %(levelname)s: (%(threadName)-10s) %(message)s')
     c_handler.setFormatter(c_format)
-    logger.setLevel(level=logging.INFO)
+    logger.setLevel(level=logging.DEBUG)
     logger.addHandler(c_handler)
 
     if args.engine == 'yad2':
