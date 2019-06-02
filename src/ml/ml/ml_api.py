@@ -98,7 +98,8 @@ def get_streets():
 def property_types():
     # TODO: should be dynamically from data
     # df['property_type'].unique().tolist()
-    types = ["דירה בבית קומות", "דירת מגורים"]
+    types = ['דירה בבית קומות', 'דירת גג', 'דירת מגורים', 'בית בודד',
+             "קוטג' חד משפחתי", "קוטג' דו משפחתי", 'דירת נופש', 'דירת גן']
     return json.dumps(types, ensure_ascii=False)
 
 
