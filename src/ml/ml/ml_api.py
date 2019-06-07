@@ -43,6 +43,11 @@ def _city_values(city):
     return content
 
 
+def _round_nearest(x, num=50000):
+    num = int(num)
+    return int(round(float(x) / num) * num)
+
+
 @api.route(f'{API_PATH}/cities', methods=['GET'])
 def cities():
     return json.dumps(_available_cities(), ensure_ascii=False)
@@ -175,4 +180,5 @@ def predict():
     _X = processor.transform(_X)
     y_pred = algo.predict(_X)
     print(y_pred)
-    return json.dumps(y_pred.tolist())
+    preds = [_round_nearest(p) for p in y_pred.tolist()]
+    return json.dumps(preds)
