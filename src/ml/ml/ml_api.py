@@ -43,7 +43,7 @@ def _city_values(city):
     return content
 
 
-def _round_nearest(x, num=50000):
+def _round_nearest(x, num=5000):
     num = int(num)
     return int(round(float(x) / num) * num)
 
